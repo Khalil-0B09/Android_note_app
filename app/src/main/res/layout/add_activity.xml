@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightGreyBackground"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/addTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Titre"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addDescriptionEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bordered_transparent_background"
+        android:gravity="top"
+        android:hint="Description"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addTitleEditText" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Enregistrer"
+        android:onClick="onClickSaveBtn"
+        app:layout_constraintTop_toBottomOf="@id/addDescriptionEditText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:onClick="onCancelClick"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/saveButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/addDescriptionEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
